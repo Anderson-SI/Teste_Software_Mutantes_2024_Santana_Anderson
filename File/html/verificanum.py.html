@@ -1,0 +1,131 @@
+<html><body><h1>verificanum.py</h1>Killed 30 out of 42 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 12</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -9,7 +9,7 @@
+         else:
+             return 'Número digitado não é múltiplo de 5 e nem de 7!'
+     except TypeError as e:
+-        return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
++        return f'XXVocê precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}XX'
+ 
+ 
+ def multiplos5(a):
+</pre><h3>Mutant 19</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -22,7 +22,7 @@
+         else:
+             return 'Número digitado não é múltiplo de 5!'
+     except TypeError as e:
+-        return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
++        return f'XXVocê precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}XX'
+ 
+ 
+ def multiplos7(a):
+</pre><h3>Mutant 26</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -35,7 +35,7 @@
+         else:
+             return 'Número digitado não é múltiplo de 7!'
+     except TypeError as e:
+-        return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
++        return f'XXVocê precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}XX'
+ 
+ 
+ def multiplos_vazio(a):
+</pre><h3>Mutant 37</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -46,7 +46,7 @@
+         if (a % 7 != 0) and (a % 6 != 0):
+             return 'miss'
+     except TypeError as e:
+-        return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
++        return f'XXVocê precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}XX'
+     return None
+ 
+ 
+</pre><h3>Mutant 38</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -55,7 +55,7 @@
+     Função principal que obtém a entrada do usuário e chama as funções de verificação.
+     """
+     try:
+-        a = int(input('Digite um número natural: '))
++        a = int(input('XXDigite um número natural: XX'))
+         
+         print(multiplos_ambos(a))
+         print(multiplos5(a))
+</pre><h3>Mutant 39</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -55,7 +55,7 @@
+     Função principal que obtém a entrada do usuário e chama as funções de verificação.
+     """
+     try:
+-        a = int(input('Digite um número natural: '))
++        a = None
+         
+         print(multiplos_ambos(a))
+         print(multiplos5(a))
+</pre><h3>Mutant 40</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -63,7 +63,7 @@
+         print(multiplos_vazio(a))
+         
+     except ValueError:
+-        print('Você precisa informar um número natural. Por favor, digite um número positivo e inteiro!')
++        print('XXVocê precisa informar um número natural. Por favor, digite um número positivo e inteiro!XX')
+ 
+ 
+ if __name__ == '__main__':
+</pre><h3>Mutant 41</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -66,6 +66,6 @@
+         print('Você precisa informar um número natural. Por favor, digite um número positivo e inteiro!')
+ 
+ 
+-if __name__ == '__main__':
++if __name__ != '__main__':
+     main()
+ 
+</pre><h3>Mutant 42</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -66,6 +66,6 @@
+         print('Você precisa informar um número natural. Por favor, digite um número positivo e inteiro!')
+ 
+ 
+-if __name__ == '__main__':
++if __name__ == 'XX__main__XX':
+     main()
+ 
+</pre><h3>Mutant 47</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -43,7 +43,7 @@
+     Função que retorna quando o número não é múltiplo de 5 nem de 7
+     """
+     try:
+-        if (a % 7 != 0) and (a % 6 != 0):
++        if (a % 7 != 0) and (a / 6 != 0):
+             return 'miss'
+     except TypeError as e:
+         return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
+</pre><h3>Mutant 48</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -43,7 +43,7 @@
+     Função que retorna quando o número não é múltiplo de 5 nem de 7
+     """
+     try:
+-        if (a % 7 != 0) and (a % 6 != 0):
++        if (a % 7 != 0) and (a % 7 != 0):
+             return 'miss'
+     except TypeError as e:
+         return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
+</pre><h3>Mutant 50</h3><pre>--- verificanum.py
++++ verificanum.py
+@@ -43,7 +43,7 @@
+     Função que retorna quando o número não é múltiplo de 5 nem de 7
+     """
+     try:
+-        if (a % 7 != 0) and (a % 6 != 0):
++        if (a % 7 != 0) and (a % 6 != 1):
+             return 'miss'
+     except TypeError as e:
+         return f'Você precisa informar um número natural. Por favor, digite um número positivo e inteiro! - {e}'
+</pre></body></html>
